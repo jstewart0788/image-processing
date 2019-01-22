@@ -6,8 +6,13 @@
     "@material-ui/core": "^3.9.0",
     "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "connected-react-router": "^6.2.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
     "gammacv": "^0.3.5",
+    "morgan": "^1.9.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -20,6 +25,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "start:server": "./bin/www",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
