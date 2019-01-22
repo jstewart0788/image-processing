@@ -33,7 +33,6 @@ class MenuAppBar extends React.Component {
   };
 
   handleClose = loc => {
-    console.log(loc)
     this.setState({ anchorEl: null });
     this.props.history.push(loc);
   };
@@ -71,7 +70,7 @@ class MenuAppBar extends React.Component {
                 onClose={this.handleClose}
               >
                 <MenuItem onClick={this.handleClose.bind(null, "/")}>Home</MenuItem>
-                <MenuItem onClick={this.handleClose.bind(null, "/toolkits")}>ToolKits</MenuItem>
+                <MenuItem onClick={this.handleClose.bind(null, "/libraries")}>Libraries</MenuItem>
               </Menu>
             </>
             <Typography variant="h6" color="inherit" className={classes.grow}>

@@ -6,7 +6,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { history, store } from "./Store";
 import Home from "./Home";
-import ToolKits from './ToolKits';
+import Libraries from './Libraries';
 import NavBar from "./Global/NavBar";
 
 const theme = createMuiTheme({
@@ -27,7 +27,7 @@ class App extends PureComponent {
             <>
               <Route path="/" component={NavBar} />
               <Route exact path="/" component={Home} />
-              <Route exact path="/toolkits" component={ToolKits} />
+              <Route exact path="/libraries" component={Libraries} />
             </>
           </MuiThemeProvider>
         </ConnectedRouter>
