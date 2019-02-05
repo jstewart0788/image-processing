@@ -24,14 +24,14 @@ TabContainer.propTypes = {
 };
 
 const styles = theme => ({
-  header:{
+  header: {
     paddingLeft: 20
   },
   root: {
     margin: '30px auto',
     backgroundColor: theme.palette.background.paper,
     width: '80%',
-    height: '60vh'
+    minHeight: '60vh'
   },
   svg: {
     height: 30
@@ -64,7 +64,8 @@ class Libraries extends React.Component {
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary"
-              variant="fullWidth"
+              variant="scrollable"
+              scrollButtons="auto"
             >
               <Tab label="OpenCV" />
               <Tab label="jsfeat" />
@@ -91,20 +92,20 @@ class Libraries extends React.Component {
                 to process and manipulate them. The potential is especially high with the increased used of virtual and
                 augmented reality.
              </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://docs.opencv.org/3.4/d5/d10/tutorial_js_root.html">https://docs.opencv.org/3.4/d5/d10/tutorial_js_root.html</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.opencv.org/3.4/d5/d10/tutorial_js_root.html">OpenCV</a>
             </TabContainer>
             <TabContainer dir={theme.direction}>
               <h2>JsFeat</h2>
               <p>jsfeat is a robust computer vision library that with a large feature set. It allows for an image
               to be broken down into a matrix and for mathematical operations to be carried out on it. This
             allows for a wide range of image manipulation such as grayscale, resampling, pyrdown, and many more. </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://inspirit.github.io/jsfeat">https://inspirit.github.io/jsfeat</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://inspirit.github.io/jsfeat">JsFeat</a>
             </TabContainer>
             <TabContainer dir={theme.direction}>
               <h2>ConvNetJS</h2>
               <p> ConvNetJS is a deep learning library written in javascript. You can use your browser to create
             Neural Networks and train them to do a variety of tasks, such as object detection, create an image, read numbers, and more. </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://cs.stanford.edu/people/karpathy/convnetjs/">https://cs.stanford.edu/people/karpathy/convnetjs/</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS</a>
             </TabContainer>
             <TabContainer dir={theme.direction}>
               <h2>GammaCV</h2>
@@ -112,14 +113,14 @@ class Libraries extends React.Component {
               <p> GammaCV is a inovative library that uses a computer's GPU in order to power their algorithms. With a paradigm
               focused on data flow, this library offers a roubust selection of features such as Down/Up sampling,
             Canny edge detection, HSVColorConverter, and others  </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://gammacv.com/">https://gammacv.com/</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gammacv.com/">GammaCV</a>
             </TabContainer>
             <TabContainer dir={theme.direction}>
               <h2>tracking.js</h2>
               <p>Tracking.js is open source library that is meant to be paired with a video or image stream.
                It's built around for purpose of real time color tracking. This can be used in a variety of
             purposes such as face detection, controling inputs using a webcam, color detection, and more. </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://trackingjs.com/">https://trackingjs.com/</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://trackingjs.com/">tracking.js</a>
             </TabContainer>
           </SwipeableViews>
         </div>

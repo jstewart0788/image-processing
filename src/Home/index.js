@@ -2,6 +2,7 @@
 import React, { PureComponent } from "react";
 import ReactDOM from 'react-dom';
 import { withStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -43,6 +44,10 @@ const styles = theme => ({
   },
   icon: {
     fontSize: 32
+  },
+  iconRotate: {
+    fontSize: 32,
+    transform: 'rotate(90deg)'
   },
   inputImage: {
     width: '100%'
@@ -97,12 +102,12 @@ class Home extends PureComponent {
     return (
       <div className={classes.container}>
         <Grid container className={classes.container} spacing={0}>
-          <Grid item xs={4}>
+          <Grid item xs={12} lg={4}>
             <Paper className={classes.paper} elevation={1}>
               <h2>Images</h2>
               <div>
                 <Grid container className={classes.container} spacing={24}>
-                  <Grid item xs={image === 1 ? 12 : 6}>
+                  <Grid item xs={12} md={6} lg={image === 1 ? 12 : 6}>
                     <img
                       id="image1"
                       onClick={this.handleImageSelect.bind(null, 1)}
@@ -111,7 +116,7 @@ class Home extends PureComponent {
                       alt="image1"
                     />
                   </Grid>
-                  <Grid item xs={image === 2 ? 12 : 6}>
+                  <Grid item xs={12} md={6} lg={image === 2 ? 12 : 6}>
                     <img
                       id="image2"
                       onClick={this.handleImageSelect.bind(null, 2)}
@@ -120,7 +125,7 @@ class Home extends PureComponent {
                       alt="image4"
                     />
                   </Grid>
-                  <Grid item xs={image === 3 ? 12 : 6}>
+                  <Grid item xs={12} md={6} lg={image === 3 ? 12 : 6}>
                     <img
                       id="image3"
                       onClick={this.handleImageSelect.bind(null, 3)}
@@ -129,7 +134,7 @@ class Home extends PureComponent {
                       alt="image5"
                     />
                   </Grid>
-                  <Grid item xs={image === 4 ? 12 : 6}>
+                  <Grid item xs={12} md={6} lg={image === 4 ? 12 : 6}>
                     <img
                       id="image4"
                       onClick={this.handleImageSelect.bind(null, 4)}
@@ -142,7 +147,7 @@ class Home extends PureComponent {
               </div>
             </Paper>
           </Grid>
-          <Grid item className={classes.dropdownContainer} xs={2}>
+          <Grid item className={classes.dropdownContainer} xs={12} lg={2} >
             <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel
                 ref={ref => {
@@ -173,10 +178,15 @@ class Home extends PureComponent {
               onClick={this.processImage}
               color="inherit"
             >
-              <PlayArrow className={classes.icon} />
+              <Hidden mdDown>
+                <PlayArrow className={classes.icon} />
+              </Hidden>
+              <Hidden lgUp>
+                <PlayArrow className={classes.iconRotate} />
+              </Hidden>
             </IconButton>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} lg={6}>
             <Paper className={classes.paper} elevation={1}>
               <h2>Output</h2>
               {error && <h3 style={{ color: 'red' }}> Please select an image and method!</h3>}
